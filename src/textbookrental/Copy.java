@@ -1,4 +1,6 @@
-//Best assignment
+package textbookrental;
+
+
 public class Copy {
 	private String copyID;
 	private Patron PatronCheckOut;

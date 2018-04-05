@@ -1,3 +1,5 @@
+package textbookrental;
+
 import java.util.HashMap;
 public class CopyStore {
 	private HashMap <String, Copy> copyList;
