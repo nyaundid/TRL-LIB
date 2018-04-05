@@ -1,3 +1,5 @@
+package textbookrental;
+
 
 /*
  * Team members: Biniam, Darius, Elvis & Patrick
