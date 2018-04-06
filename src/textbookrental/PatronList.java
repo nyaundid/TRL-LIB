@@ -6,7 +6,7 @@ public class PatronList {
 	String Pid;
 	private HashMap <String, Patron> PatronList;
 	public PatronList()
-	{
+	{// placed a yes and no for holds
 		PatronList = new HashMap <String, Patron>();
 		PatronList.put ("10", new Patron ("10", "Biniam", "Y"));
 		PatronList.put ("20", new Patron ("20", "Darius", "N"));
