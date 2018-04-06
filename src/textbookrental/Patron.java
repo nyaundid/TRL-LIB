@@ -25,7 +25,6 @@ public class Patron {
 		}	
 	} 
 	
-
 	public String toString() {
 		String display= " " ;
 		System.out.println("Patron name:" + PName + "\t Holds:" + HOLDS + "\t Patron Id:" + PID);
