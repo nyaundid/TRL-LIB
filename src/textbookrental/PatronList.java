@@ -8,20 +8,17 @@ public class PatronList {
 	public PatronList()
 	{
 		PatronList = new HashMap <String, Patron>();
-		PatronList.put ("10", new Patron ("10", "Biniam"));
-		PatronList.put ("20", new Patron ("20", "Darius"));
-		PatronList.put ("30", new Patron ("30", "Patrice"));
-		PatronList.put ("40", new Patron ("40", "Elvis"));
+		PatronList.put ("10", new Patron ("10", "Biniam", "Y"));
+		PatronList.put ("20", new Patron ("20", "Darius", "N"));
+		PatronList.put ("30", new Patron ("30", "Patrice", "Y"));
+		PatronList.put ("40", new Patron ("40", "Elvis", "N"));
 	}
 
-/* smell:
- * method has more than one thing to do
- * Refactoring: Extract method (listSearch) 
- */
+
 	public Patron fetchPatron(String PID) {
 		Pid = PID;
 		Patron searchResult= null;
-		// refactored code
+		
 		searchResult = pListSearch(PID ,searchResult);
 		return searchResult;								
 	}

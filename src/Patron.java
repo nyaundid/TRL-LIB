@@ -5,11 +5,13 @@ public class Patron {
 	/* encapsulate data */
 	private String PID;
 	private String PName;
+	private String HOLDS;
 	private ArrayList <Copy> checkingOutCopies;
 	
-	Patron(String newPID, String newName) {
+	Patron(String newPID, String newName, String newHOLDS) {
 		PID = newPID;
 		PName = newName;
+		HOLDS = newHOLDS;
 		checkingOutCopies = new ArrayList<Copy>();
 	}
 	public void checkOut (Copy copy)
@@ -24,9 +26,10 @@ public class Patron {
 
 	public String toString() {
 		String display= " " ;
-		System.out.println("Patron name:" + PName + "\t Patron Id:" + PID);
+		System.out.println("Patron name:" + PName + "Holds:" + HOLDS + "\t Patron Id:" + PID);
 		if (checkingOutCopies.isEmpty())
 			display= "========================== \n Patron has not checked out copies \n";
+		
 		else
 		{ 
 			for ( Copy c: checkingOutCopies )
