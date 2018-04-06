@@ -9,12 +9,14 @@ public class Patron {
 	private String PName;
 	private String HOLDS;
 	private ArrayList <Copy> checkingOutCopies;
+	private ArrayList <Holds> claimingHolds;
 	
 	Patron(String newPID, String newName, String newHOLDS) {
 		PID = newPID;
 		PName = newName;
 		HOLDS = newHOLDS;
 		checkingOutCopies = new ArrayList<Copy>();
+		claimingHolds = new ArrayList<Holds>();
 	}
 	public void checkOut (Copy copy)
 	{
@@ -24,10 +26,31 @@ public class Patron {
 		checkingOutCopies.add(copy);
 		}	
 	} 
-	
+	public void holds (Holds hold)
+	{
+		if ( hold != null)
+		{ 
+			hold.setHOLDSTo(this);
+			claimingHolds.add(hold);
+		}	
+	} 
 	public String toString() {
 		String display= " " ;
 		System.out.println("Patron name:" + PName + "\t Holds:" + HOLDS + "\t Patron Id:" + PID);
+		
+		
+		
+		if (claimingHolds.isEmpty())
+			display= "no holds";
+		
+		else
+		{ 
+			for ( Holds h: claimingHolds )
+				System.out.println(" \nChecked out copy:\n" + h.toString());
+		}	
+		
+		
+		
 		if (checkingOutCopies.isEmpty())
 			display= "========================== \n Patron has not checked out copies \n";
 		
