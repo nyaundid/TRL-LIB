@@ -12,6 +12,7 @@ public class TRL_App {
 	private static PatronList pStore;
 	private static CopyStore cStore;
 	private static Manage coManage;
+	private static TextBook tBook;
 
 	public static void main(String[] args) {
 

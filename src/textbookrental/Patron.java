@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Patron {
 	
 	DueDate d= new DueDate();
-	/* encapsulate data */
+	
 	private String PID;
 	private String PName;
 	private String HOLDS;
@@ -60,6 +60,18 @@ public class Patron {
 				System.out.println(" \nChecked out copy:\n" + c.toString()+ d.toString());
 		}	 
 		return display;
+	}
+	public Object getRentedBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Object getloanedBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Object getloanedTextBooks() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
