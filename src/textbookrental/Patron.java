@@ -36,5 +36,9 @@ public class Patron {
 		}	 
 		return display;
 	}
+	public Object getloanedTextBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

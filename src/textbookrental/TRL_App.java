@@ -2,22 +2,28 @@ package textbookrental;
 
 
 /*
- * Team members: Biniam, Darius, Elvis & Patrick
+ * Team members: Biniam, Darius, Elvis Ndenge & Patrice Yemmene
  */
 
 
 import java.util.Scanner;
 
 public class TRL_App {
-	private static PatronList pStore;
+	
+	
+	
+    private static PatronList pStore;
 	private static CopyStore cStore;
 	private static Manage coManage;
+	private static TextBook textbook;
+	
 
 	public static void main(String[] args) {
 
 		pStore = new PatronList();
 		cStore = new CopyStore();
 		coManage = new Manage(pStore, cStore);
+		
 		System.out.println("Welcome...... ");
 		System.out.println();
 		Scanner scan = new Scanner(System.in);
@@ -43,6 +49,11 @@ public class TRL_App {
 		}
 	}
 
+	
+	
+	
+
+	
 	private static void doCheckOut() {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
@@ -91,7 +102,7 @@ public class TRL_App {
 			System.out.println("Due date is:" + dueDate);
 		}
 	}
-
+	
 	private static void displayPatronInfo() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter Patron's ID OR 0 to quit");
